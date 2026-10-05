@@ -1,0 +1,318 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:white;
+
+    color: #fff;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    min-height: 76px;
+    padding: 12px max(5%, calc((100% - 1200px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: #151817;
+    border-bottom: 3px solid #e4573d;
+    box-shadow: 0 5px 18px rgba(18, 24, 22, 0.16);
+}
+
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+
+.brand-mark {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    color: #151817;
+    background: #f2b84b;
+    border-radius: 5px;
+    font-size: 19px;
+}
+
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.nav-link {
+    padding: 10px 16px;
+    color: #c9cecb;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: #fff;
+    background: #292f2c;
+}
+
+
+.nav-link.active {
+    color: #fff;
+    background: #e4573d;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+
+.about {
+    padding: 28px 5%;
+    color: #c9cecb;
+    background: #151817;
+    border-top: 3px solid #e4573d;
+    text-align: center;
+}
+
+
+.about h2 {
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+.about p {
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOVIE GRID
+========================= */
+
+.movie-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   MOVIE CARD
+========================= */
+
+.movie-card {
+    background: #1c1c1c;
+
+    border-radius:solid 8px orange;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+
+.movie-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================
+   MOVIE LINK
+========================= */
+
+.movie-card a {
+    display: block;
+
+    color: #fff;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   POSTER
+========================= */
+
+.movie-card img {
+    width: 100%;
+
+    height: 300px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   MOVIE NAME
+========================= */
+
+.movie-card h2 {
+    padding: 15px 10px;
+
+    font-size: 17px;
+
+    text-align: center;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .movie-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+}
+
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .movie-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        min-height: 68px;
+        padding: 10px 4%;
+        gap: 8px;
+    }
+
+
+    .brand {
+        gap: 8px;
+        font-size: 21px;
+    }
+
+
+    .brand-mark {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .site-nav {
+        gap: 2px;
+    }
+
+
+    .nav-link {
+        padding: 9px 11px;
+        font-size: 13px;
+    }
+
+    .main {
+        width: 94%;
+
+        margin: 25px auto;
+    }
+
+
+    .movie-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+
+    .movie-card img {
+        height: 250px;
+    }
+
+
+    .movie-card h2 {
+        font-size: 15px;
+
+        padding: 12px 5px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .movie-card img {
+        height: 400px;
+    }
+
+}
